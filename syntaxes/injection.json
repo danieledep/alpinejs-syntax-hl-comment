@@ -1,0 +1,75 @@
+{
+  "scopeName": "html.alpinejs.attribute",
+  "injectionSelector": [
+    "L:text.html.derivative",
+    "L:text.html.jinja",
+    "L:text.html.liquid",
+    "L:text.html.nunjucks",
+    "L:text.html.php",
+    "L:text.html.twig"
+  ],
+  "patterns": [
+    {
+      "include": "#alpine-directives"
+    }
+  ],
+  "repository": {
+    "alpine-directives": {
+      "name": "meta.attribute.alpine",
+      "begin": "(?:\\b(x-)|(:|@|#))([a-zA-Z0-9\\-_]+)(?:\\:([a-zA-Z\\-_]+))?(?:\\.([a-zA-Z0-9\\-_]+(?:\\.[a-zA-Z0-9\\-_]+)*))?\\s*(=)",
+      "end": "(?<='|\")|(?=[\\s<>`])",
+      "captures": {
+        "1": {
+          "name": "entity.other.attribute-name.html"
+        },
+        "2": {
+          "name": "entity.other.attribute-name.html"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html"
+        },
+        "4": {
+          "name": "entity.other.attribute-name.html"
+        },
+        "5": {
+          "name": "entity.other.attribute-name.html"
+        },
+        "6": {
+          "name": "punctuation.separator.key-value.html"
+        }
+      },
+      "patterns": [
+        {
+          "begin": "\"",
+          "end": "\"",
+          "beginCaptures": {
+            "0": {
+              "name": "string.quoted.double.html punctuation.definition.string.begin.html"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "string.quoted.double.html punctuation.definition.string.end.html"
+            }
+          },
+          "patterns": [
+            {
+              "begin": "\\{?(?=\\s*(?://|/\\*)\\s*(?:MARK:\\s*)?(?:javascript|js))",
+              "end": "(?=\")",
+              "contentName": "meta.embedded.inline.alpinejs",
+              "patterns": [
+                {
+                  "include": "source.js"
+                }
+              ]
+            },
+            {
+              "match": "[^\"\\{]+|\\{(?!%\\s*comment|#)",
+              "name": "string.quoted.double.html"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

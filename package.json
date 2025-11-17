@@ -1,0 +1,62 @@
+{
+	"name": "alpinejs-mark-syntax-highlight",
+	"displayName": "Alpine JS Mark Syntax Highlight",
+	"description": "Add Javascript syntax highlighting for Alpine.js x- attributes by adding a comment",
+	"author": "Daniele De Pietri",
+	"license": "MIT",
+	"version": "0.0.1",
+	"icon": "assets/alpine_logo.png",
+	"publisher": "danieledep",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Sperovita/alpinejs-syntax-highlight.git"
+	},
+	"keywords": [
+		"alpine",
+		"alpinejs",
+		"alpine.js"
+	],
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "inline-alpinejs",
+				"configuration": "./language-configurations/language-configuration.json"
+			}
+		],
+		"configuration": {
+			"title": "Inline Alpine.js",
+			"properties": {
+				"inline-alpinejs.editor.minimap.showMarkSectionHeaders": true,
+				"inline-alpinejs.editor.minimap.markSectionHeaderRegex": {
+					"type": "string",
+					"default": "^\\s*//\\s*MARK:\\s*(?<separator>-+)?\\s*(?<label>.*?)$",
+					"description": "Regular expression for detecting MARK section headers. Must include a 'label' named capture group."
+				}
+			}
+		},
+		"grammars": [
+			{
+				"language": "inline-alpinejs",
+				"path": "./syntaxes/injection.json",
+				"scopeName": "html.alpinejs.attribute",
+				"injectTo": [
+					"text.html.derivative",
+					"text.html.jinja",
+					"text.html.liquid",
+					"text.html.nunjucks",
+					"text.html.php",
+					"text.html.twig"
+				],
+				"embeddedLanguages": {
+					"meta.embedded.inline.alpinejs": "inline-alpinejs"
+				}
+			}
+		]
+	}
+}
