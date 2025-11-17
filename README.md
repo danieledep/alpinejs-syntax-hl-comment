@@ -9,6 +9,19 @@ Add Javascript syntax highlighting for [Alpine JS](https://alpinejs.dev/) `x-` a
   }"
 ```
 
+## Supported comments
+
+```js
+// js
+// javascript
+// MARK: js
+// MARK: javascript
+/* js */
+/* javascript */
+/* MARK: js */
+/* MARK: javascript */
+```
+
 ## Supported Files
 
 - Html
