@@ -36,7 +36,7 @@ It also adds normal greyed-out comments inside the `x-` attributes that don't tr
 ```
 
 > ⚠️ **Section headers don't show in the minimap**   
-> Vscode support for section headers triggered in embedded languages is not well documented.
+> Vscode support for section headers triggered in embedded languages is spotty / not well documented.
 
 ## Supported Files
 
