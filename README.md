@@ -1,4 +1,4 @@
-# alpinejs-mark-syntax-highlight
+# alpinejs-syntax-hl-comment
 
 Add Javascript syntax highlighting for [Alpine JS](https://alpinejs.dev/) `x-` attributes by adding a comment
 

@@ -1,6 +1,6 @@
 {
-	"name": "alpinejs-mark-syntax-highlight",
-	"displayName": "Alpine JS Mark Syntax Highlight",
+	"name": "alpinejs-syntax-hl-comment",
+	"displayName": "Alpine JS Comment Syntax Highlight",
 	"description": "Add Javascript syntax highlighting for Alpine.js x- attributes by adding a comment",
 	"author": "Daniele De Pietri",
 	"license": "MIT",
@@ -8,7 +8,7 @@
 	"publisher": "danieledep",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/danieledep/alpinejs-mark-syntax-highlight"
+		"url": "https://github.com/danieledep/alpinejs-syntax-hl-comment"
 	},
 	"keywords": [
 		"alpine",
