@@ -1,5 +1,9 @@
 # Change Log
 
+## [Unreleased]
+
+- Added the `x-intersect` `.parent` modifier introduced in Alpine.js 3.16.0: `.parent` snippet plus an updated `x-intersect` hover/completion entry documenting it
+
 ## [0.1.2]
 
 - Fixed syntax highlighting for event listeners with multiple colon-separated segments (e.g. `@shopify:section:select.window`) in all highlighting modes; colon segments now also allow digits
