@@ -189,6 +189,11 @@
 		"body": ".margin.${1:200}px",
 		"description": "x-intersect: expands (or shrinks, if negative) the viewport boundary used for intersection."
 	},
+	".parent": {
+		"prefix": ".parent",
+		"body": ".parent",
+		"description": "x-intersect: observes visibility within the element's parent instead of the viewport. Requires Alpine 3.16.0+."
+	},
 	".inert": {
 		"prefix": ".inert",
 		"body": ".inert",
