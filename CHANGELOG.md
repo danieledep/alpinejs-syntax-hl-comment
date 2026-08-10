@@ -1,6 +1,6 @@
 # Change Log
 
-## [Unreleased]
+## [0.1.3]
 
 - Added the `x-intersect` `.parent` modifier introduced in Alpine.js 3.16.0: `.parent` snippet plus an updated `x-intersect` hover/completion entry documenting it
 
